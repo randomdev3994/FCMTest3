@@ -43,7 +43,8 @@ class BackgroundActionButtonHandler : BroadcastReceiver() {
     notManager.cancel(FCMService.getAppName(context), notId);
     notManager.notify(FCMService.getAppName(context), notId, mBuilder.build());
     
-
+    Log.d(TAG, "Title: " + extras.getString(PushConstants.TITLE));
+    Log.d(TAG, "Content: " + extras?.getString(PushConstants.MESSAGE));
     Log.d(TAG, "Sadas mSomeFunction End")
     //notManager.cancel(FCMService.getAppName(context), notId)
   }
