@@ -40,8 +40,9 @@ class BackgroundActionButtonHandler : BroadcastReceiver() {
     mBuilder.setContentTitle("Notification Alert");
     mBuilder.setContentText("Random notification");
     mBuilder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
-    notManager.notify(FCMService.getAppName(context), notId, mBuilder.build());
     notManager.cancel(FCMService.getAppName(context), notId);
+    notManager.notify(FCMService.getAppName(context), notId, mBuilder.build());
+    
 
     Log.d(TAG, "Sadas mSomeFunction End")
     //notManager.cancel(FCMService.getAppName(context), notId)
