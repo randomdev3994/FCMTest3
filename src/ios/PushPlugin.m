@@ -255,6 +255,11 @@
                     if (maybeButton != nil) {
                         [actions addObject:maybeAction];
                     }
+                    
+                    UNTextInputNotificationAction *textInput = [UNTextInputNotificationAction actionWithIdentifier:@"Test"	 title:@"Test" options:UNNotificationActionOptionNone];
+                    
+                    [actions addObject:textInput];
+
 
                     UNNotificationCategory *notificationCategory = [UNNotificationCategory categoryWithIdentifier:identifier
                                                                                                           actions:actions
